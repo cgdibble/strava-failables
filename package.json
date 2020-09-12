@@ -1,0 +1,17 @@
+{
+  "name": "strava-failables",
+  "version": "0.0.1",
+  "description": "A failables wrapper for Strava APIs.",
+  "main": "src/strava.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "cgdibble@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@pheasantplucker/failables": "^2.0.17",
+    "jest": "^26.4.2",
+    "node-fetch": "^2.6.1",
+    "strava-v3": "^2.0.5"
+  }
+}
