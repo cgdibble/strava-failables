@@ -1,5 +1,5 @@
 const { assertSuccess, assertFailure, assertSuccessWhich } = require('@pheasantplucker/failables');
-const { configureStrava, getAthlete, getAllActivities, getToken } = require('./strava');
+const { configureStrava, getAthlete, getAllActivities, getToken, getGearItem } = require('./strava');
 const stravaApi = require('strava-v3');
 
 const {
@@ -72,4 +72,13 @@ describe('strava.js', () => {
 			assertSuccess(result);
 		});
 	});
+
+	describe('Gear', () => {
+		const gearId = 'b5473525'
+		it('should get the gear', async () => {
+			const result = await getGearItem(gearId)
+			console.log('result', result);
+			assertSuccess(result)
+		})
+	})
 });

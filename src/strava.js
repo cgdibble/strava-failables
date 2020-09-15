@@ -24,9 +24,15 @@ const getAllActivities = async (athleteId) => {
   const result = await stravaApi.athlete.listActivities({id: athleteId});
   return success(result);
 };
+
+const getGearItem = async (gearId) => {
+  const result = await stravaApi.gear.get({id:gearId})
+  return success(result)
+}
 module.exports = {
     configureStrava,
     getAthlete,
     getAllActivities,
-    getToken
+    getToken,
+    getGearItem
 };
