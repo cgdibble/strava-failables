@@ -77,8 +77,7 @@ describe('strava.js', () => {
 		const gearId = 'b5473525';
 		it('should get the gear', async () => {
 			const result = await getGearItem(gearId);
-			console.log('result', result);
-			assertSuccess(result);
+			assertSuccessWhich((gear) => gear.id === gearId, result);
 		});
 	});
 });
