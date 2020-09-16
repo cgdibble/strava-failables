@@ -74,11 +74,11 @@ describe('strava.js', () => {
 	});
 
 	describe('Gear', () => {
-		const gearId = 'b5473525'
+		const gearId = 'b5473525';
 		it('should get the gear', async () => {
-			const result = await getGearItem(gearId)
+			const result = await getGearItem(gearId);
 			console.log('result', result);
-			assertSuccess(result)
-		})
-	})
+			assertSuccess(result);
+		});
+	});
 });
